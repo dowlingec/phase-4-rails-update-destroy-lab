@@ -18,6 +18,9 @@ class PlantsController < ApplicationController
     render json: plant, status: :created
   end
 
+  def destroy
+    plant = Plant.find_by(id: params [:id])
+
   private
 
   def plant_params
